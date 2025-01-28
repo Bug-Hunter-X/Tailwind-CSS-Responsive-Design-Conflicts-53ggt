@@ -1,0 +1,9 @@
+This bug occurs when using Tailwind CSS with complex responsive design configurations, specifically when combining multiple responsive directives like `md:`, `lg:` etc. with other utility classes.  The problem manifests as unexpected styles being applied, or intended styles being overridden, often resulting in inconsistent or broken layouts across different screen sizes.
+
+For example:
+```html
+<div class="bg-gray-100 md:bg-gray-200 lg:bg-gray-300 p-4">
+  <p>This is some text.</p>
+</div>
+```
+In this example, depending on the order of declaration or other conflicting styles, the background color might not transition smoothly between screen sizes or not reflect the intended values. The issue can become particularly difficult to debug in large applications with multiple overlapping styles.
